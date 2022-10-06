@@ -25,8 +25,8 @@ namespace CalculatorService
 
         [OperationContract]
         double Div(double n1, double n2);
-        //[OperationContract]
-        //double GreaterNumber(double n1, double n2);
+        [OperationContract]
+        string GreaterNumber(double n1, double n2);
         [OperationContract]
         string Login(string email, string password);
 

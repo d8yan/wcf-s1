@@ -39,6 +39,12 @@ namespace ConsoleApp1.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Div", ReplyAction="http://tempuri.org/IService1/DivResponse")]
         System.Threading.Tasks.Task<double> DivAsync(double n1, double n2);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GreaterNumber", ReplyAction="http://tempuri.org/IService1/GreaterNumberResponse")]
+        string GreaterNumber(double n1, double n2);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GreaterNumber", ReplyAction="http://tempuri.org/IService1/GreaterNumberResponse")]
+        System.Threading.Tasks.Task<string> GreaterNumberAsync(double n1, double n2);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Login", ReplyAction="http://tempuri.org/IService1/LoginResponse")]
         string Login(string email, string password);
         
@@ -103,6 +109,14 @@ namespace ConsoleApp1.ServiceReference1 {
         
         public System.Threading.Tasks.Task<double> DivAsync(double n1, double n2) {
             return base.Channel.DivAsync(n1, n2);
+        }
+        
+        public string GreaterNumber(double n1, double n2) {
+            return base.Channel.GreaterNumber(n1, n2);
+        }
+        
+        public System.Threading.Tasks.Task<string> GreaterNumberAsync(double n1, double n2) {
+            return base.Channel.GreaterNumberAsync(n1, n2);
         }
         
         public string Login(string email, string password) {

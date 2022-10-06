@@ -33,16 +33,20 @@ namespace CalculatorService
         {
             return (n1 - n2);
         }
-        //public double GreaterNumber(double n1, double n2)
-        //{
-        //    if (n1-n2 > 0)
-        //    {
-        //        return n1;
-        //    } else if (n1-n2 <0 ){
-        //       return n2;
+        public string GreaterNumber(double n1, double n2)
+        {
+            if (n1-n2 > 0)
+            {
+               return "first number is big";
+            } else if (n1-n2 <0 ){
+               return "second number is big";
 
-        //    }
-        //}
+            }
+            else
+            {
+                return "they are equal.";
+            }
+        }
         public string Login(string email, string password)
         {
             if(email.Equals(username) && password.Equals(pass))

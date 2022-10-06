@@ -22,6 +22,7 @@ namespace ConsoleApp1
                 Console.WriteLine("3. Multiply");
                 Console.WriteLine("4. Divide");
                 Console.WriteLine("5. Login");
+                Console.WriteLine("6. which number is big?");
                 Console.WriteLine("\t Enter your choice:");
                 choice = Console.ReadLine();
 
@@ -66,6 +67,14 @@ namespace ConsoleApp1
                         Console.WriteLine("Enter password: ");
                         pass = Console.ReadLine();
                         result = client.Login(email, pass);
+                        Console.WriteLine("The Divide is : " + result);
+                        break;
+                    case "6":
+                        Console.WriteLine("Enter number 1: ");
+                        n1 = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Enter number 2: ");
+                        n2 = double.Parse(Console.ReadLine());
+                        result = client.GreaterNumber(n1, n2);
                         Console.WriteLine("The Divide is : " + result);
                         break;
                    
