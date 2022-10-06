@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ConsoleApp1.ServiceReference1 {
+namespace CalculatorService.ServiceReference1 {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -38,21 +38,15 @@ namespace ConsoleApp1.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Div", ReplyAction="http://tempuri.org/IService1/DivResponse")]
         System.Threading.Tasks.Task<double> DivAsync(double n1, double n2);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Login", ReplyAction="http://tempuri.org/IService1/LoginResponse")]
-        string Login(string email, string password);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/Login", ReplyAction="http://tempuri.org/IService1/LoginResponse")]
-        System.Threading.Tasks.Task<string> LoginAsync(string email, string password);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IService1Channel : ConsoleApp1.ServiceReference1.IService1, System.ServiceModel.IClientChannel {
+    public interface IService1Channel : CalculatorService.ServiceReference1.IService1, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class Service1Client : System.ServiceModel.ClientBase<ConsoleApp1.ServiceReference1.IService1>, ConsoleApp1.ServiceReference1.IService1 {
+    public partial class Service1Client : System.ServiceModel.ClientBase<CalculatorService.ServiceReference1.IService1>, CalculatorService.ServiceReference1.IService1 {
         
         public Service1Client() {
         }
@@ -103,14 +97,6 @@ namespace ConsoleApp1.ServiceReference1 {
         
         public System.Threading.Tasks.Task<double> DivAsync(double n1, double n2) {
             return base.Channel.DivAsync(n1, n2);
-        }
-        
-        public string Login(string email, string password) {
-            return base.Channel.Login(email, password);
-        }
-        
-        public System.Threading.Tasks.Task<string> LoginAsync(string email, string password) {
-            return base.Channel.LoginAsync(email, password);
         }
     }
 }

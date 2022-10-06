@@ -13,6 +13,7 @@ namespace ConsoleApp1
             ServiceReference1.Service1Client client = new ServiceReference1.Service1Client();
             string choice="";
             double n1, n2,n3;
+            string email, pass,result;
             while (!choice.Equals("5"))
             {
                 Console.WriteLine("\t\tCalculator");
@@ -20,7 +21,8 @@ namespace ConsoleApp1
                 Console.WriteLine("2. Sub");
                 Console.WriteLine("3. Multiply");
                 Console.WriteLine("4. Divide");
-                Console.WriteLine("5 Enter your choice:");
+                Console.WriteLine("5. Login");
+                Console.WriteLine("\t Enter your choice:");
                 choice = Console.ReadLine();
 
                 switch (choice)
@@ -56,6 +58,15 @@ namespace ConsoleApp1
                         n2 = double.Parse(Console.ReadLine());
                         n3 = client.Div(n1, n2);
                         Console.WriteLine("The Divide is : " + n3);
+                        break;
+
+                    case "5":
+                        Console.WriteLine("Enter email: ");
+                        email = Console.ReadLine();
+                        Console.WriteLine("Enter password: ");
+                        pass = Console.ReadLine();
+                        result = client.Login(email, pass);
+                        Console.WriteLine("The Divide is : " + result);
                         break;
                    
                     default:
